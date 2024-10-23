@@ -98,7 +98,7 @@ let up = `> *➺sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄ�
 │✫➠ - *📂REPOSITORY NAME:* SILENT-SOBX-MD
 │✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
 │✫➠ - *🛡️OWNER:* sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²
-│✫➠ - *🌐 URL:* https://github.com/SILENTLOVER4/SILENT-SOBX-MD
+│✫➠ - *🌐 URL:* https://github.com/SILENTLOVER40/SILENT-SOBX-MD
 ╰━━━━━━━━━━━━━━━━━╯
 
 *YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\nPREFIX: ${prefix}`;

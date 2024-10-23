@@ -13,7 +13,12 @@ async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender
 try{
 const config = await readEnv();
 let owner = ` 
-> *POWERED BY SILENTLOVER432*
+*HEAR IS BOT OWNER INFO*
+*NAME:-* *USMAN.S*
+*AGE:-* *20 YEARS*
+*PUBLIC NAME:-* *SILENTLOVER*
+
+> *BY SILENTLOVER432*
 `
 await conn.sendMessage(from, { text: owner ,
   contextInfo: {
@@ -27,10 +32,10 @@ await conn.sendMessage(from, { text: owner ,
       serverMessageId: 999
     },
 externalAdReply: { 
-title: 'SILENT-SOBX-MD',
+title: 'SILENTLOVER432',
 body: `${pushname}`,
 mediaType: 1,
-sourceUrl: "https://wa.me/+923096287432?text=Hy" ,
+sourceUrl: "https://wa.me/+923096287432?text=HY SILENTLOVER4 I'M MSG YOU FROM OWNER ADS" ,
 thumbnailUrl: "https://telegra.ph/file/3ef5623a33997cf948438.jpg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true

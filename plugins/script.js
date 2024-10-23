@@ -37,7 +37,7 @@ title: 'SILENT-SOBX-MD',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://github.com/SILENTLOVER40/SILENT-SOBX-MD" ,
-thumbnailUrl: "![IMG-20241010-WA0061](https://gist.github.com/user-attachments/assets/23221c39-8772-48b8-bf82-42987205819b)" ,
+thumbnailUrl: "https://i.im.ge/2024/10/23/kYbXXJ.IMG-20241010-WA0061.th.jpeg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }

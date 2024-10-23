@@ -25,7 +25,7 @@ cmd({
         }
 
         const movieInfo = `
-*🎬UMAR Movie Search🎬*
+*🎬 SILENT-SOBX-MD 🎬*
 
 *ᴛɪᴛʟᴇ:* ${data.Title}
 *ʏᴇᴀʀ:* ${data.Year}

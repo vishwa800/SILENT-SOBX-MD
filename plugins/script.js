@@ -37,7 +37,7 @@ title: 'SILENT-SOBX-MD',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://github.com/SILENTLOVER40/SILENT-SOBX-MD" ,
-thumbnailUrl: "https://telegra.ph/file/e47b23583ab7ec42d58df.jpg" ,
+thumbnailUrl: "https://imgtr.ee/images/e47b23583ab7ec42d58df.jpg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }

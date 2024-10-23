@@ -9,6 +9,7 @@ cmd({
 },           
 async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, isBotAdmins, reply }) => {
     try {
+      if (!isOwner) return;
         // Check if the command is used in a group
         if (!isGroup) return reply(`This command is only for groups.`);
         

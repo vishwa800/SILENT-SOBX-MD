@@ -48,8 +48,6 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 *❖│▸* *ᴄʀᴇᴀᴛᴏʀ* : *➺ѕเℓεɳƭ_ℓσѵε૨࿐*
 *❖│▸* *ᴠᴇʀsɪᴏɴs* : *ᴠ.2.0.0*
 *❖│▸* *ᴍᴇɴᴜ ᴄᴍᴅ* : *ᴍᴇɴᴜ ʟɪsᴛ*
-*❖│▸* *ꜱᴜʙꜱᴄʀɪʙᴇ ᴍʏ ʏᴛ ᴄʜᴀɴɴᴇʟ* : *https://youtube.com/@silentlover432*
-*❖│▸* *ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ* : *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
 *┬│▸*
 *│╰────────────···▸▸*
 *└──────────────···▸*
@@ -177,7 +175,7 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 ╘✦•·········•••••••••············•✦ 
 `
 
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG}, text: madeMenu ,
+await conn.sendMessage(from, { text: madeMenu ,
   contextInfo: {
     mentionedJid: [ '' ],
     groupMentions: [],
@@ -189,7 +187,7 @@ await conn.sendMessage(from,{image:{url:config.ALIVE_IMG}, text: madeMenu ,
       serverMessageId: 999
     },
 externalAdReply: { 
-title: 'SILENT-SOBX-MD MENU LIST',
+title: '◀︎SILENT-SOBX-MD MENU▶︎',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s" ,

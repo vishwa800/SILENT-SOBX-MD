@@ -74,3 +74,33 @@ reply('*Error !!*')
 l(e)
 }
 })
+
+
+cmd({
+    pattern: "tagadmin",
+    desc: "Tags all the admins in the group.",
+    category: "group",
+    filename: __filename,
+},           
+async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, reply }) => {
+    try {
+        // Check if the command is used in a group
+        if (!isGroup) return reply(`This command is only for groups.`);
+        
+        // Fetch all group admins
+        const admins = groupAdmins;
+        if (admins.length === 0) {
+            return reply('There are no admins in this group.');
+        }
+        // Create a message with all admin tags
+        let adminTagMessage = '*Tagging all admins in the group:*\n\n';
+        for (let admin of admins) {
+            adminTagMessage += `@${admin.split('@')[0]}\n`;  // Mention each admin by their number
+        }
+        // Send the message and tag the admins
+        await conn.sendMessage(from, { text: adminTagMessage, mentions: admins }, { quoted: mek });
+    } catch (e) {
+        console.error('Error tagging admins:', e);
+        reply('An error occurred while trying to tag all admins. Please try again.');
+    }
+})

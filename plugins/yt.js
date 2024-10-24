@@ -128,10 +128,18 @@ TITLE: ${anu.title}
 
 ❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁`
 await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
-const yt2 = await dl.youtubedl(anu.url)
-if (yt2.audio['128kbps'].fileSizeH.includes('MB') && yt2.audio['128kbps'].fileSizeH.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-var du = await yt2.audio['128kbps'].download()
-    let senda =  await conn.sendMessage(from, { document: { url : du }, mimetype: 'audio/mpeg', fileName: yt2.title + '.mp3',caption: '> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅' }, { quoted: mek })
+const yt2 = await dl.youtubedl(anu.url, { quality: 'highestaudio', format: 'mp3' });
+
+if (yt2.fileSizeH.includes('MB') && yt2.fileSizeH.replace(' MB','') >= config.MAX_SIZE) 
+  return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
+
+var du = await yt2.download();
+let senda = await conn.sendMessage(from, { 
+  document: { url : du }, 
+  mimetype: 'audio/mpeg', 
+  fileName: yt2.title + '.mp3',
+  caption: '> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ '
+}, { quoted: mek });
     await conn.sendMessage(from, { react: { text: '🎼', key: senda.key }})
     
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})

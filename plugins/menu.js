@@ -177,7 +177,7 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 ╘✦•·········•••••••••············•✦ 
 `
 
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG}, text: madeMenu ,
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu,
   contextInfo: {
     mentionedJid: [ '' ],
     groupMentions: [],

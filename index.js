@@ -24,6 +24,11 @@ const { File } = require('megajs')
 const { fromBuffer } = require('file-type')
 const bodyparser = require('body-parser')
 const mongoose = require('mongoose')
+const { tmpdir } = require('os')
+const Crypto = require('crypto')
+const path = require('path')
+const cheerio = require('cheerio')
+const fetch = require('node-fetch')
 
 const ownerNumber = ['923096287432']
 

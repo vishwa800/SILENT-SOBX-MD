@@ -27,7 +27,7 @@ if (!isAdmins) return reply(ADMIN)
                 reply(`Open time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = mek.participant
-                    const open = `*Open time* the group was opened by admin\n now members can send messages`
+                    const open = `*OPEN TIME* THE GROUP WAS OPENED BY SILENT-SOBX-MD TO APPROVED ADMIN\n NOW MEMBERS CAN SEND MESSAGES 🔓`
                     conn.groupSettingUpdate(from, 'not_announcement')
                     reply(open)
                 }, timer)
@@ -64,7 +64,7 @@ if (!isAdmins) return reply(ADMIN)
                 reply(`Close time ${q} starting from now`)
                 setTimeout(() => {
                     var nomor = m.participant
-                    const close = `*Close time* group closed by admin\nnow only admin can send messages`
+                    const close = `*CLOSE TIME* GROUP CLOSED BY SILENT-SOBX-MD AT APPROVED ADMIN\nNOW ONLY ADMIN CAN SEND MESSAGES 🔐`
                     conn.groupSettingUpdate(from, 'announcement')
                     reply(close)
                 }, timer)
@@ -77,7 +77,8 @@ l(e)
 
 
 cmd({
-    pattern: "tagadmin",
+    pattern: "tagadmins",
+    alais:["tagadmin"],
     desc: "Tags all the admins in the group.",
     category: "group",
     filename: __filename,
@@ -93,7 +94,7 @@ async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, reply }) => {
             return reply('There are no admins in this group.');
         }
         // Create a message with all admin tags
-        let adminTagMessage = '*Tagging all admins in the group:*\n\n';
+        let adminTagMessage = '*TAGGING ALL ADMINS IN THE GROUP 🔳:*\n\n';
         for (let admin of admins) {
             adminTagMessage += `@${admin.split('@')[0]}\n`;  // Mention each admin by their number
         }

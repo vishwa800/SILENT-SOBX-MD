@@ -177,7 +177,7 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 ╘✦•·········•••••••••············•✦ 
 `
 
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu,
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG}, text: madeMenu ,
   contextInfo: {
     mentionedJid: [ '' ],
     groupMentions: [],
@@ -189,7 +189,7 @@ await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu,
       serverMessageId: 999
     },
 externalAdReply: { 
-title: 'SILENT-SOBX-MD MENU',
+title: 'SILENT-SOBX-MD MENU LIST',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s" ,

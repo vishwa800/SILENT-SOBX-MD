@@ -77,8 +77,9 @@ l(e)
 
 
 cmd({
-    pattern: "tagadmins",
-    alais:["tagadmin"],
+    pattern: "tagadmin",
+    alais:["tagadmins"],
+    react: "🙀",
     desc: "Tags all the admins in the group.",
     category: "group",
     filename: __filename,

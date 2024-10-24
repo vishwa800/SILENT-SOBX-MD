@@ -83,8 +83,8 @@ cmd({
     category: "group",
     filename: __filename,
 },           
-async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, reply }) => {
-    try {
+async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
         // Check if the command is used in a group
         if (!isGroup) return reply(`This command is only for groups.`);
         if (!isAdmins) return reply(`This command is only for group admin.`);
@@ -103,6 +103,6 @@ async (conn, mek, m, { from, isGroup, groupMetadata, groupAdmins, reply }) => {
         await conn.sendMessage(from, { text: adminTagMessage, mentions: admins }, { quoted: mek });
     } catch (e) {
         console.error('Error tagging admins:', e);
-        reply('An error occurred while trying to tag all admins. Please try again.');
+        reply('you are not an admin.');
     }
 })

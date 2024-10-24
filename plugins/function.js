@@ -45,7 +45,9 @@ async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
     }
 });
 
-cmd({ on: ["delete", "delete-many"] }, async (conn, mek, m, { from, isGroup, isAdmins, isBotAdmins, reply }) => {
+cmd({
+  on: "body"
+    async (conn, mek, m, { from, isGroup, isAdmins, isBotAdmins, reply }) => {
   try {
     const config = await readEnv();
 

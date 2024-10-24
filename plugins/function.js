@@ -44,3 +44,26 @@ async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
         reply("An error occurred while processing the message.")
     }
 });
+
+cmd({ on: ["delete", "delete-many"] }, async (conn, mek, m, { from, isGroup, isAdmins, isBotAdmins, reply }) => {
+  try {
+    const config = await readEnv();
+
+    if (config.ANTI_DELETE === 'true') {
+      if (isGroup) {
+        // Group delete detection
+        if (!isAdmins || isBotAdmins) {
+          await conn.sendMessage(from, { text: "DETECTED! Someone deleted a message." }, { quoted: mek });
+          await conn.sendMessage(config.LOG_GROUP, { text: `Delete detected by @${from.split('@')[0]} in ${from}.` });
+        }
+      } else {
+        // Inbox delete detection
+        await conn.sendMessage(from, { text: "DETECTED! Someone deleted a message." });
+        await conn.sendMessage(config.LOG_GROUP, { text: `Delete detected in inbox by @${from.split('@')[0]}.` });
+      }
+    }
+  } catch (error) {
+    console.error(error)
+    reply("An error occurred while processing the message.")
+  }
+});

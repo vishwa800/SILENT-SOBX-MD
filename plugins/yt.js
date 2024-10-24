@@ -129,7 +129,7 @@ TITLE: ${anu.title}
 ❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁`
 await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
 const yt2 = await dl.youtubedl(anu.url)
-if (yt2.formats[0].fileSize.includes('MB') && yt2.formats[0].fileSize.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
+if (yt2.formatsH[0].fileSizeH.includes('MB') && yt2.formats[0].fileSize.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
 var du = await yt2.formats[0].download()
     let senda =  await conn.sendMessage(from, { document: { url : du }, mimetype: 'audio/mpeg', fileName: yt2.title + '.mp3',caption: '> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅' }, { quoted: mek })
     await conn.sendMessage(from, { react: { text: '🎼', key: senda.key }})

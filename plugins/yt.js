@@ -1,8 +1,7 @@
 const config = require('../config')
 const l = console.log
 const { cmd, commands } = require('../command')
-const dl = require('@bochilteam/scraper')  
-const ytdl = require('yt-search');
+const ytdl = require('ytdl-core');
 const fs = require('fs-extra')
 var videotime = 60000 // 1000 min
 const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
@@ -128,12 +127,15 @@ TITLE: ${anu.title}
 
 ❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁`
 await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
-const yt2 = await dl.youtubedl(anu.url)
-if (yt2.formatsH[0].fileSizeH.includes('MB') && yt2.formats[0].fileSize.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-var du = await yt2.formats[0].download()
-    let senda =  await conn.sendMessage(from, { document: { url : du }, mimetype: 'audio/mpeg', fileName: yt2.title + '.mp3',caption: '> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅' }, { quoted: mek })
+    const yt = await ytdl(anu.url, { quality: 'highestaudio' });
+    const filename = `${yt.title}.mp3`;
+    await conn.sendMessage(m.chat, { 
+      document: { url: yt.streamURL },
+      mimetype: 'audio/mpeg',
+      fileName: filename,
+      caption: `> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅`
     await conn.sendMessage(from, { react: { text: '🎼', key: senda.key }})
-    
+
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
 
 } catch (e) {

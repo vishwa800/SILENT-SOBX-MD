@@ -177,10 +177,29 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 ╘✦•·········•••••••••············•✦ 
 `
 
-await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
-
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG}, text: madeMenu ,
+  contextInfo: {
+    mentionedJid: [ '' ],
+    groupMentions: [],
+    forwardingScore: 999,
+    isForwarded: false,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: '120363232588171807@newsletter',
+      newsletterName: "SILENTLOVER432",
+      serverMessageId: 999
+    },
+externalAdReply: { 
+title: 'SILENT-SOBX-MD MENU',
+body: `${pushname}`,
+mediaType: 1,
+sourceUrl: "https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s" ,
+thumbnailUrl: "https://telegra.ph/file/2a06381b260c3f096a612.jpg" ,
+renderLargerThumbnail: true,
+showAdAttribution: true
+}
+}}, { quoted: mek})
 }catch(e){
 console.log(e)
 reply(`${e}`)
 }
-})
+});

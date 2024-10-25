@@ -36,6 +36,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const url = data.url;
 
         let desc = `
+*♻️SILENT-SOBX-MD MUSIC DOWNLOADER 🪄*    
 *🪄 ᴛɪᴛʟᴇ :-* ${data.title}
 
 > 👀 ᴠɪᴇᴡꜱ:- ${data.views}
@@ -148,6 +149,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const url = data.url;
 
         let desc = `
+*♻️SILENT-SOBX-MD VIDEO DOWNLOADER🪄*    
 *🪄 ᴛɪᴛʟᴇ :-* ${data.title}
 
 > 👀 ᴠɪᴇᴡꜱ:- ${data.views}
@@ -166,7 +168,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Send the initial message and store the message ID
         const sentMsg = await conn.sendMessage(from, {
             document: { url: pdfUrl }, // Path to your PDF file
-            fileName: 'SILENTXSOB', // Filename for the document
+            fileName: 'SILENT-SOBX-MD', // Filename for the document
             mimetype: "application/xml",
             fileLength: 99999999999999,
             caption: desc,

@@ -4,7 +4,8 @@ const os = require("os")
 const {runtime} = require('../lib/functions')
 const config = require('../config')
 
-
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
 const startTime = Date.now()
         const message = await conn.sendMessage(from, { text: '*_🪄Pinging..._*' })
         const endTime = Date.now()

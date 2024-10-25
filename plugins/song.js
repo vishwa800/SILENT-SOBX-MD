@@ -1,7 +1,7 @@
 const { cmd, commands } = require('../command');
 const fg = require('api-dylux');
 const yts = require('yt-search');
-const pdfUrl = 'https://files.catbox.moe/h5ddpq.jpg';
+const pdfUrl = 'https://telegra.ph/file/2a06381b260c3f096a612.jpg';
 
 // Function to extract the video ID from youtu.be or YouTube links
 function extractYouTubeId(url) {
@@ -54,7 +54,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         // Send the initial message and store the message ID
         const sentMsg = await conn.sendMessage(from, {
             document: { url: pdfUrl }, // Path to your PDF file
-            fileName: 'SILENTXSOB', // Filename for the document
+            fileName: 'SILENT-SOBX-MD', // Filename for the document
             mimetype: "application/xmlf",
             fileLength: 99999999999999,
             caption: desc,
@@ -62,14 +62,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterName: '𝐔𝐌𝟒𝐑 𝐗𝐃🌈™',
+                    newsletterName: 'SILENT-SOBX-MD',
                     newsletterJid: "120363315623541442@newsletter",
                 },
                 externalAdReply: {
                     title: data.title,
                     body: data.ago,
                     thumbnailUrl: data.thumbnail, // Use the URL directly here
-                    sourceUrl: 'https://instagram.com/um4rxd',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s',
                     mediaType: 1,
                     renderLargerThumbnail: true
                 }
@@ -109,7 +109,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                             document: { url: downloadUrl },
                             mimetype: "audio/mpeg",
                             fileName: `${data.title}.mp3`,
-                            caption: "> ❝SILENTSOB❞"
+                            caption: "> ❝SILENT-SOBX-MD❞"
                         }, { quoted: mek });
                     }
 
@@ -174,14 +174,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterName: 'UD TEAM',
+                    newsletterName: 'SILENT-SOBX-MD',
                     newsletterJid: "120363315623541442@newsletter",
                 },
                 externalAdReply: {
                     title: data.title,
                     body: data.ago,
                     thumbnailUrl: data.thumbnail, // Use the URL directly here
-                    sourceUrl: 'https://instagram.com/um4rxd',
+                    sourceUrl: 'https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s',
                     mediaType: 1,
                     renderLargerThumbnail: true
                 }
@@ -221,7 +221,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                             document: { url: downloadUrl },
                             mimetype: "video/mp4",
                             fileName: `${data.title}.mp4`,
-                            caption: "> ❝SILENTSOB❞"
+                            caption: "> ❝SILENT-SOBX-MD❞"
                         }, { quoted: mek });
                     }
 

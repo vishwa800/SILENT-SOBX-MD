@@ -16,7 +16,7 @@ try{
 var inital = new Date().getTime();
 let ping = await conn.sendMessage(from , { text: '*_ZINDA HUU_*'  }, { quoted: mek } )
 var final = new Date().getTime();
-await conn.sendMessage(from, { delete: ping.key })
+await conn.sendMessage(from, { edit: ping.key })
 return await conn.sendMessage(from , { text: '*🔥Pong*\n *' + (final - inital) + ' ms* '  }, { quoted: mek } )
 } catch (e) {
 reply('*Error !!*')

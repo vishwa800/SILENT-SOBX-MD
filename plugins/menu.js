@@ -191,7 +191,7 @@ title: '◀︎SILENT-SOBX-MD MENU▶︎',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s" ,
-thumbnailUrl: "https://telegra.ph/file/2a06381b260c3f096a612.jpg" ,
+thumbnailUrl: "https://files.catbox.moe/h5ddpq.jpg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }

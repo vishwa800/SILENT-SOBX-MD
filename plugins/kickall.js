@@ -8,9 +8,9 @@ cmd({
     category: "group",
     filename: __filename,
 },           
-async(conn, mek, m,{from, prefix, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-      if (!isAdmins) return reply(`ONLY ADMINS CAN USE THIS CMD`)
+      if (!isAdmins) return reply(`ONLY ADMINS CAN USE THIS CMD 🪄♻️`)
       
         // Check if the command is used in a group
         if (!isGroup) return reply(`This command is only for groups.`);

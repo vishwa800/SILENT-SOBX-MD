@@ -4,7 +4,7 @@ const path = require('path');
 const {readEnv} = require('../lib/database')
 const config = require('../config')
 // List of bad words to check against
- // Replace with actual words
+ const badWords = ["wtf", "mia", "xxx","fuck","sex","huththa","pakaya","ponnaya","hutto"]
 cmd({
   on: "body"
 },
@@ -43,16 +43,4 @@ async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
         console.error(error)
         reply("An error occurred while processing the message.")
     }
-})
-
-cmd({ on: 'message' }, async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-    const config = await readEnv();
-    if (config.AUTO_REACT === 'true') {
-      await conn.sendMessage(m.chat, { react: { text: '💖', key: m.key } });
-    }
-  } catch (error) {
-    console.error(error);
-  }
 });
-

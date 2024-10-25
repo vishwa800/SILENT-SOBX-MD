@@ -4,7 +4,7 @@ const path = require('path');
 const {readEnv} = require('../lib/database')
 const config = require('../config')
 // List of bad words to check against
- const badWords = ["wtf", "mia", "xxx","fuck","sex","huththa","pakaya","ponnaya","hutto"]
+ // Replace with actual words
 cmd({
   on: "body"
 },

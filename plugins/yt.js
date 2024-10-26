@@ -24,14 +24,14 @@ if (!q) return reply('*Please give me quary to download*')
 let yts = require("yt-search")
 let search = await yts(q)
 let anu = search.videos[0]
-const cap = `*SILENT-SOBX-MD VIDEO DOWNLOADER 🛜*
-*TITLE: ${anu.title}*
+const cap = `*♻️ SILENT-SOBX-MD VIDEO DOWNLOADER 🪄*
+*💻TITLE♻️* : ${anu.title}
 
-🔗𝐔𝐑𝐋 : ${anu.url}
+*🔗URL♻️* : ${anu.url}
 
-🌐𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 : ${anu.timestamp}
+*🌐DURATION♻️* : ${anu.timestamp}
 
-📟𝐕𝐈𝐄𝐖𝐒: ${anu.views}
+*📟WIEWS♻️* : ${anu.views}
 
 
 *sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²*
@@ -40,7 +40,7 @@ const cap = `*SILENT-SOBX-MD VIDEO DOWNLOADER 🛜*
 
 *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
 
-❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁`
+♻️ ❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁ ♻️`
 await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
 const yt = await dl.youtubedl(anu.url).catch(async () => await dl.youtubedlv2(anu.url)) 
 const yt2 = await dl.youtubedlv2(anu.url)
@@ -57,7 +57,7 @@ await conn.sendMessage(from, { react: { text: '🎥', key: senda1.key }})
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
     
 } catch (e) {
-  reply("*Not Found !*")
+  reply("*NOT FOUND..!*")
   l(e)
 }
 })
@@ -78,24 +78,24 @@ if (!q) return reply('Please give me quary to download')
 let yts = require("yt-search")
 let search = await yts(q)
 let anu = search.videos[0]
-const cap = `*SILENT-SOBX-MD MUSIC DOWNLOADER 🛜*
+const cap = `*♻️ SILENT-SOBX-MD MUSIC DOWNLOADER 🪄*
 
-TITLE: ${anu.title}
+*💻TITLE♻️* : ${anu.title}
 
-🔗𝐔𝐑𝐋 : ${anu.url}
+*🔗URL♻️* : ${anu.url}
 
-🌐𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 : ${anu.timestamp}
+*🌐DURATION♻️* : ${anu.timestamp}
 
-📟𝐕𝐈𝐄𝐖𝐒: ${anu.views}
+*📟WIEWS♻️* : ${anu.views}
 
 
 *sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²*
 
-*ᴊᴏɪɴ ғᴏʀ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴜᴘᴅᴀᴛᴇs*
+*♻️ᴊᴏɪɴ ғᴏʀ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴜᴘᴅᴀᴛᴇs♻️*
 
 *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
 
-❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁`
+♻️ ❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁❁ ♻️`
 await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
 const yt2 = await dl.youtubedl(anu.url)
 if (yt2.audio['128kbps'].fileSizeH.includes('MB') && yt2.audio['128kbps'].fileSizeH.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
@@ -106,7 +106,7 @@ var du = await yt2.audio['128kbps'].download()
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
 
 } catch (e) {
-  reply("ERROR ")
+  reply("ERROR PLEASE TRY AGAIN")
   l(e)
 }
-})
+});

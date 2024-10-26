@@ -87,12 +87,11 @@ await conn.sendMessage(from, { react: { text: '🎥', key: senda1.key }})
 
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
     
-} catch (e) {
-  reply("*Not Found !*")
-  l(e)
+}catch(e){
+console.log(e)
+reply(`${e}`)
 }
 })
-
 cmd({
     pattern: "play",
     alias: ["yta","song"],
@@ -136,8 +135,8 @@ var du = await yt2.audio['128kbps'].download()
     
 await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
 
-} catch (e) {
-  reply("ERROR ")
-  l(e)
+}catch(e){
+console.log(e)
+reply(`${e}`)
 }
 });

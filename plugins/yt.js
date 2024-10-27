@@ -1,112 +1,112 @@
 const config = require('../config')
-const l = console.log
-const { cmd, commands } = require('../command')
-const dl = require('@bochilteam/scraper')  
-const ytdl = require('yt-search');
-const fs = require('fs-extra')
-var videotime = 60000 // 1000 min
-const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
+const dl = require('@bochilteam/scraper') 
+const fs = require('fs')
+const {
+    getBuffer,
+    getGroupAdmins,
+    getRandom,
+    getsize,
+    h2k,
+    isUrl,
+    Json,
+    runtime,
+    sleep,
+    fetchJson
+} = require('../lib/functions')
+const {
+    cmd,
+    commands
+} = require('../command')
+var sizetoo =  "_This file size is too big_"
+const yts = require("ytsearch-venom")
+
+let wm = config.FOOTER
+let newsize = config.MAX_SIZE * 1024 * 1024
 
 cmd({
-    pattern: "video",
-    alias: ["ytvideo","ytv","drama"],
-    use: '.video sameer kanjr',
-    react: "📽️",
-    desc: "Search & download yt videos.",
-    category: "download",
-    filename: __filename
-
-},
-
-async(conn, mek, m,{from, l, quoted, body, isCmd, darkneo, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if (!q) return reply('*Please give me quary to download*')
-let yts = require("yt-search")
-let search = await yts(q)
-let anu = search.videos[0]
-const cap = `*♻️ SILENT-SOBX-MD VIDEO DOWNLOADER 🪄*
-*💻TITLE♻️* : ${anu.title}
-
-*🔗URL♻️* : ${anu.url}
-
-*🌐DURATION♻️* : ${anu.timestamp}
-
-*📟WIEWS♻️* : ${anu.views}
-
-
-*sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²*
-
-*ᴊᴏɪɴ ғᴏʀ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴜᴘᴅᴀᴛᴇs*
-
-*https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
-
-*❒⁠⁠⁠⁠▭▬▭▬▭▬▭▬▭▬▭▬▭❒*⁠⁠⁠⁠`
-await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
-const yt = await dl.youtubedl(anu.url).catch(async () => await dl.youtubedlv2(anu.url)) 
-const yt2 = await dl.youtubedlv2(anu.url)
-if (yt2.video['360p'].fileSizeH.includes('MB') && yt2.video['360p'].fileSizeH.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-if (yt2.video['360p'].fileSizeH.includes('GB')) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-let senda = await conn.sendMessage(from, { video: {url: await yt.video['360p'].download() }, caption: '*VIDEO BY SILENT-SOBX-MD*'}, { quoted: mek })  
-await conn.sendMessage(from, { react: { text: '🎥', key: senda.key }})
-
-if (yt2.video['720p'].fileSizeH.includes('MB') && yt2.video['720p'].fileSizeH.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-if (yt2.video['720p'].fileSizeH.includes('GB')) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-let senda1 = await conn.sendMessage(from, { video: {url: await yt.video['720p'].download() }, caption: '> ᴠɪᴅᴇᴏ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅'}, { quoted: mek })  
-await conn.sendMessage(from, { react: { text: '🎥', key: senda1.key }})
-
-await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
-    
-} catch (e) {
-  reply("*NOT FOUND..!*")
-  l(e)
-}
-})
-
-cmd({
-    pattern: "play",
-    alias: ["yta","song"],
-    use: '.play koun umar',
+    pattern: "song",
+    alias: ["ytmp3","play"],
+    use: '.song lelena',
     react: "🎧",
-    desc: "Search & download yt song.",
+    desc: 'Download audios from youtube',
     category: "download",
     filename: __filename
+
 },
 
-async(conn, mek, m,{from, l, quoted, body, isCmd, darkneo, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if (!q) return reply('Please give me quary to download')
-let yts = require("yt-search")
-let search = await yts(q)
-let anu = search.videos[0]
-const cap = `*♻️ SILENT-SOBX-MD MUSIC DOWNLOADER 🪄*
+    async (conn, m, mek, { from, q, reply }) => {
+        try {
+            if (!q) return await reply('*Please enter a query or a url!*')
+            const url = q.replace(/\?si=[^&]*/, '');
+            var results = await yts(url);
+            var result = results.videos[0]
+         let caption = ` 🪔 *Y T - S O N G*\n\n`
+         caption += `	•  *Title* : ${result.title}\n`
+         caption += `	•  *Views* : ${result.views}\n`
+         caption += `	•  *Duration* : ${result.duration}\n`
+         caption += `	◦  *URL* : ${result.url}\n\n`
 
-*💻TITLE♻️* : ${anu.title}
+            let buttons = [
+            {
+                name: "quick_reply",
+                buttonParamsJson: JSON.stringify({
+                    display_text: "Audio",
+                    id: `.ytaa ${result.url}`
+                }),
+            },
+            {
+                name: "quick_reply",
+                buttonParamsJson: JSON.stringify({
+                    display_text: "Document",
+                    id: `.ytad ${result.url}±${result.title}`
+                }),
+            }
+            ]
+            let message = {
+                image: result.thumbnail,
+                header: '',
+                footer: wm,
+                body: caption
 
-*🔗URL♻️* : ${anu.url}
+            }
+            return await conn.sendButtonMessage(from, buttons, m, message)
+        } catch (e) {
+            console.log(e)
+            reply('*Error !!*')
+        }
+    })
 
-*🌐DURATION♻️* : ${anu.timestamp}
-
-*📟WIEWS♻️* : ${anu.views}
-
-
-*sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²*
-
-*♻️ᴊᴏɪɴ ғᴏʀ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴜᴘᴅᴀᴛᴇs♻️*
-
-*https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
-
-*❒⁠⁠⁠⁠▭▬▭▬▭▬▭▬▭▬▭▬▭❒*⁠⁠⁠⁠`
-await conn.sendMessage(from, { image: { url: anu.thumbnail }, caption: cap}, { quoted: mek })
-const yt2 = await dl.youtubedl(anu.url)
-if (yt2.audio['128kbps'].fileSizeH.includes('MB') && yt2.audio['128kbps'].fileSizeH.replace(' MB','') >= config.MAX_SIZE) return await conn.sendMessage(from, { text: '*This video too big !!*' }, { quoted: mek });
-var du = await yt2.audio['128kbps'].download()
-    let senda =  await conn.sendMessage(from, { document: { url : du }, mimetype: 'audio/mpeg', fileName: yt2.title + '.mp3',caption: '> ᴍᴜsɪᴄ ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ʙᴏᴛ ✅' }, { quoted: mek })
-    await conn.sendMessage(from, { react: { text: '🎼', key: senda.key }})
+cmd({
+    pattern: "ytaa",
+    react: "📥",
+    dontAddCommandList: true,
+    filename: __filename
+},
+    async (conn, mek, m, { from, q, reply }) => {
+try {
+           if (!q) return await reply('*Need a youtube url!*')
+           const prog = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${q}`)
+           await conn.sendMessage(from, { audio:{ url: prog.result.download_url }, mimetype: 'audio/mpeg' }, { quoted: mek })
+         } catch (e) {
+	       console.log(e)
+        }
+    })
     
-await conn.sendMessage(from, { react: { text: '✅', key: mek.key }})
-
-} catch (e) {
-  reply("ERROR PLEASE TRY AGAIN")
-  l(e)
-}
-});
+    
+    cmd({
+    pattern: "ytad",
+    react: "📥",
+    dontAddCommandList: true,
+    filename: __filename
+},
+    async (conn, mek, m, { from, q, reply }) => {
+try {
+           if (!q) return await reply('*Need a youtube url!*')
+           const link = q.split("|")[0]
+           const title = q.split("|")[1]  || 'null'
+           const prog = await fetchJson(`https://api-pink-venom.vercel.app/api/ytmp3?url=${link}`)
+           await conn.sendMessage(from, { document:{ url: prog.result.download_url }, mimetype: 'audio/mpeg' , caption: wm, fileName: `${title}.mp3` }, { quoted: mek });
+         } catch (e) {
+	       console.log(e)
+        }
+    })

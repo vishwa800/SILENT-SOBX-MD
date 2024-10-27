@@ -13,7 +13,7 @@ cmd({
   alias: ["ytmp3", "play"],
   use: '.song lelena',
   react: "🪄",
-  desc: 'Download audios from youtube',
+  desc: 'Download audio songs from youtube',
   category: "download",
   filename: __filename
 }, async (conn, m, mek, { from, q, reply }) => {
@@ -32,11 +32,8 @@ cmd({
  
 `
     const audio = await dl.youtubedl(result.url)
-    const video = await dl.youtubedlv2(result.url)
     if (audio.size > newsize) return reply(sizetoo)
-    if (video.size > newsize) return reply(sizetoo)
-    await conn.sendMessage(from, { audio: audio, caption: caption + 'Audio' })
-    await conn.sendMessage(from, { video: video, caption: caption + 'Video' })
+    await conn.sendMessage(from, { audio: audio, caption: caption })
   } catch (e) {
     console.log(e)
     reply('*Error !!*')

@@ -14,7 +14,7 @@ function extractYouTubeId(url) {
 function convertYouTubeLink(q) {
     const videoId = extractYouTubeId(q);
     if (videoId) {
-        return `https://api-pink-venom.vercel.app/api/ytdl?url=${url}`;
+        return `https://www.youtube.com/watch?v=${videoId}`;
     }
     return q;
 }

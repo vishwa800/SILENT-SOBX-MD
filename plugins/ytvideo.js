@@ -31,7 +31,7 @@ _*♻️ SILENT-SOBX-MD VIDEO DOWNLOADER 🪄*_
 
 🌸 *URL 🔗:* ${search.all[0].url}
 
-*_📤ᴜᴘʟᴏᴅɪɴɢ ʏᴏᴜʀ ᴠɪᴅᴇᴏ ꜰɪʟʟ📤_*
+*_📤ᴜᴘʟᴏᴅɪɴɢ ʏᴏᴜʀ ᴠɪᴅᴇᴏ ꜰɪʟᴇ📤_*
 
 > ʙʏ sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ...📽️
 
@@ -46,7 +46,7 @@ await conn.sendMessage(from,{image:{url: search.all[0].thumbnail},caption:desc},
 await conn.sendMessage(from, {
   video: {url: data.result.downloadLink},
 mimetype: "video/mp4",
- fileName: `${data.result.title}.mp4`,caption: `*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³² ···* 🧑🏻‍💻`}, { quoted: mek })
+ fileName: `${data.result.title}.mp4`,caption: `*© ᴄʀᴇᴀᴛᴇᴅ ʙʏ ꜱɪʟᴇɴᴛʟᴏᴠᴇʀ• • •⁴³²* 🧑🏻‍💻`}, { quoted: mek })
 
 }catch(e){
     console.log(e)

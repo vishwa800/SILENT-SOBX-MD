@@ -14,9 +14,12 @@ try{
 const config = await readEnv();
 let repo =`
 *╭──────────────●●►*
-*| BOT OWNER:* SILENTLOVER432
-*| SILENT-SOBX-MD REPO:* https://github.com/SILENTLOVER40/SILENT-SOBX-MD
-*| SUPPORT GROUP:* https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s
+*| BOT OWNER:* *SILENTLOVER432*
+*|*
+*| SILENT-SOBX-MD REPO:* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*
+*|*
+*| SUPPORT GROUP:* *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
+*|*
 *╰──────────────●●►*
 
 > *POWERED BY SILENTLOVER432*

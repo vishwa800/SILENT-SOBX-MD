@@ -98,13 +98,13 @@ let up = `*╭──────────────●●►*
 
 *https://youtube.com/@silentlover432?si=n3pYYLvSFLP7Shj7*
 
-╭⊱✫🔮 SILENT-SOBX-MD 🔮✫⊱╮
-│✫➠ - *📂REPOSITORY NAME:* SILENT-SOBX-MD
-│✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
-│✫➠ - *🛡️OWNER:* sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²
-│✫➠ - *🌐URL:* https://github.com/SILENTLOVER40/SILENT-SOBX-MD
+*╭⊱✫🔮 SILENT-SOBX-MD 🔮✫⊱╮*
+*│✫➠ - 📂REPOSITORY NAME:* *SILENT-SOBX-MD*
+*│✫➠ - 📃DESCRIPTION:* *THE WORLD BEST WHATSAPP BOT♻️*
+*│✫➠ - 🛡️OWNER:* *SILENT LOVER⁴³²*
+*│✫➠ - 🌐URL:* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*
 
-*YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\nPREFIX: ${prefix}
+*YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: ${prefix}*
 
 *╰──────────────●●►*`;
 conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://files.catbox.moe/h5ddpq.jpg` }, caption: up })

@@ -44,3 +44,41 @@ async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
         reply("An error occurred while processing the message.")
     }
 });
+
+// Add reaction logic
+
+cmd({ on: "body"), async (conn, mek, m, { from, body, isGroup, sender }) => {
+
+try {
+
+// Check if the message is the activation message (you might want to set a specific message to check against)
+
+const isActivationMessage = body.includes("activate bot"); // Change this to your actual activation command/message
+
+// React to the activation message
+
+if (isActivationMessage) {
+
+await m.react("❤️");
+
+}
+
+// Check preference for reactions
+
+const userPrefersReactions = userPreferences[sender] !==
+
+false; // Default to true if not set
+
+// Add public reaction if the user prefers it (userPrefersReactions) {
+
+await m.react("🩷"); // Public reaction for other
+
+}
+
+} catch (error) {
+
+console.error(error);
+
+}
+
+});

@@ -13,31 +13,6 @@ let baseUrl;
 const yourName = "*SILENT-SOBX-MD 🧬*";
 
 
-
-//fb downloader
-cmd({
-    pattern: "fb",
-    alias: ["facebook"],
-    desc: "download fb videos",
-    category: "download",
-    react: "📩",
-    filename: __filename
-},
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        if (!q && !q.startsWith("https://")) return reply("give me fb url")
-        //fetch data from api  
-        let data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`)
-        reply("*SILENT-SOBX-MD FACEBOOK VIDEO DOWNLOADING...📥*")
-        //send video (hd,sd)
-        await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: `- HD\n\n ${yourName}` }, { quoted: mek })
-        await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: `- SD \n\n ${yourName}` }, { quoted: mek })  
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
-    }
-})
-
 //tiktok downloader
 cmd({
     pattern: "tiktok",
@@ -135,22 +110,3 @@ async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, send
 })
 
 //Instagram download 
-cmd({
-    pattern: "ig",
-    desc: "download ig videos",
-    category: "download",
-    react: "📩",
-    filename: __filename
-},
-async(conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
-    try {
-        if (!q && !q.startsWith("https://")) return reply("give me an Instagram url")
-        //fetch data from api  
-        let data = await fetchJson(`${baseUrl}/api/igdl?url=${q}`)
-        reply("*SILENT-SOBX-MD INSTAGRAM FILE DOWNLOADING...📥*")
-        await conn.sendMessage(from, { video: { url: data.data.data }, mimetype: "video/mp4", caption: `${data.data.name}\n\n${yourName}` }, { quoted: mek })                                                                                                                 
-    } catch (e) {
-        console.log(e)
-        reply(`${e}`)
-    }
-})

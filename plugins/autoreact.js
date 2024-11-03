@@ -7,7 +7,6 @@ cmd({
 },
 async(conn, mek, m,{from, isReact, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-function addReactions(m, isReact, senderNumber, botNumber) {
   const botReactions = ["🥰", "😳", "🤭", "😘", "🤗", "😹"];
   const userReactions = [
     "😊", "😁", "😃", "😄", "😆", "🤣",
@@ -22,7 +21,7 @@ function addReactions(m, isReact, senderNumber, botNumber) {
   } else if (!isReact && senderNumber !== botNumber) {
     m.react(userReactions[Math.floor(Math.random() * userReactions.length)]);
   }
-        }
+        
 
     } catch (error) {
         console.error(error)

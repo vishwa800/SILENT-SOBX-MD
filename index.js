@@ -197,7 +197,7 @@ if(isReact) return
 m.react("👑")
 }
 
-if(senderNumber.includes("923154647639")){
+if(senderNumber.includes("923306288432")){
 if(isReact) return
 m.react("👑")
 }
@@ -207,8 +207,21 @@ if(isReact) return
 m.react("🦋")
 }
 //==========================public react===============//
-if (!isReact && senderNumber !== botNumber) {
-    m.react("💖","🤪","🤗","😘","🥰");
+function addReactions(m, isReact, senderNumber, botNumber) {
+  const botReactions = ["🥰", "😳", "🤭", "😘", "🤗", "😹"];
+  const userReactions = [
+    "😊", "😁", "😃", "😄", "😆", "🤣",
+    "🎉", "🎊", "👏", "💕", "😍", "🙌",
+    "😳", "😁", "💖", "🩷", "🥰", "🥹",
+    "🤩", "🤯", "🚀", "🔥", "💥", "👽", "🤖", "💻",
+    "🎁", "📦", "🕰️", "📆"
+  ];
+
+  if (!isReact && senderNumber === botNumber) {
+    m.react(botReactions[Math.floor(Math.random() * botReactions.length)]);
+  } else if (!isReact && senderNumber !== botNumber) {
+    m.react(userReactions[Math.floor(Math.random() * userReactions.length)]);
+  }
 }
 //============================        
         

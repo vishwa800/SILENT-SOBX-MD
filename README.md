@@ -115,34 +115,17 @@ mongodb+srv://suhail:suhail@clustere.tuhzpez.mongodb.net/?retryWrites=true&w=maj
 
 ### <br>    ❖ SESSION_ID ❖
 
-`✠ IF SILENT-SOBX-MD PAIR WEB NOT WORKING SO U CAN USE THIS PRABATH-MD WEB PAIR:- NOTE🗒:-WHEN YOU GET YOUR SESSION THEN REMOVE **PRABATH-MD~** FROM SESSION_ID ONLY PASTE WORDS EXAMPLE: **rOhBxJ5I#Dtlk** THIS TYPE ✠`
-
-<br>
-
-<p align="center">
-<a href="https://prabath-md-pair-web-v2-slk.koyeb.app/pair"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:-black?style=for-the-badge&logo=render"></a>
-<p/>
 
 `✠ IF YOU DON'T HAVE YOUR SESSION_ID SO U CAN GET IT CLICK ON SESSION_ID BUTTON AND PASTE YOUR NUMBER With COUNTRY CODE EXAMPLE:+92309XXXX THEN YOU CAN GET YOUR SESSION_ID ✠`
 
 <br>
 
 <p align="center">
-<a href="https://web-pair-sobx-md-bel3.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:1-red?style=for-the-badge&logo=render"></a>
+<a href="https://express-pairing-code2-mdzb.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:1-red?style=for-the-badge&logo=render"></a>
 <p/>
 
 <br>
 
-`✠ IF UPPER SESSION_ID PAIR NOT WORK IF YOU DON'T GET SESSION_ID IN YOUR INBOX 📬 SO YOU CAN USE THIS PUBLIC SESSION_ID:2 PAIR ✠`
-
-<br>
-
-<p align="center">
-<a href="https://web-pair-sobx-md-bel3.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:2-blue?style=for-the-badge&logo=render"></a>
-<p/>
-
-
- <br>
  
 ### <br>   ❖ DEPLOY_HEROKU ❖
 

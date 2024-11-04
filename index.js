@@ -208,16 +208,10 @@ m.react("🦋")
 }
 //==========================public react===============
 if (!isReact && senderNumber !== botNumber) {
-    m.react("💙");
+    m.react("🥰");
 }
-//============================
-if (!isReact && senderNumber === botNumber) {
-    m.react("🩷");
-}        
-//============================
+//===========================
 
-//============================
-        
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return

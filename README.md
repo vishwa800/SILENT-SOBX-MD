@@ -120,7 +120,7 @@ mongodb+srv://suhail:suhail@clustere.tuhzpez.mongodb.net/?retryWrites=true&w=maj
 <br>
 
 <p align="center">
-<a href="https://web-pair-sobx-md.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:1-red?style=for-the-badge&logo=render"></a>
+<a href="https://web-pair-l3jm.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:1-red?style=for-the-badge&logo=render"></a>
 <p/>
 
 <br>
@@ -130,7 +130,7 @@ mongodb+srv://suhail:suhail@clustere.tuhzpez.mongodb.net/?retryWrites=true&w=maj
 <br>
 
 <p align="center">
-<a href="https://web-pair-sobx-md.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:2-blue?style=for-the-badge&logo=render"></a>
+<a href="https://web-pair-l3jm.onrender.com"><img height= "35" title="Author" src="https://img.shields.io/badge/SESSION ID:2-blue?style=for-the-badge&logo=render"></a>
 <p/>
 
 

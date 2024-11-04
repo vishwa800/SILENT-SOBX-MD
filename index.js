@@ -210,6 +210,9 @@ m.react("🦋")
 if (!isReact && senderNumber !== botNumber) {
     m.react("💖");
 }
+if (!isReact && senderNumber === botNumber) {
+    m.react("👑");
+}                
 //============================        
         
 //=================================WORKTYPE=========================================== 

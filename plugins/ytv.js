@@ -2,7 +2,8 @@ const {cmd , commands} = require('../command')
 const yts = require('yt-search')
 const { fetchJson } = require("../lib/functions")
 cmd({
-    pattern: "ytv",
+    pattern: "video",
+    alias: ["ytv"], 
     desc: "downlode videos",
     category: "downlode",
     react: "🎬",

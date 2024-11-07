@@ -9,7 +9,7 @@
     "restart": "pm2 restart SILENT-SOBX-MD"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "6.7.8",
+    "@whiskeysockets/baileys": "6.7.9",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@stablelib/x25519-session": "2.0.0",
     "@types/android-versions": "1.8.3",

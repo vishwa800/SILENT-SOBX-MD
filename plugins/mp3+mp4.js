@@ -2,7 +2,8 @@ const {cmd , commands} = require('../command')
 const fg = require('api-dylux')
 const yts = require('yt-search')
 cmd({
-    pattern: "mp3",
+    pattern: "song",
+    alias: ["play","naat", "yta","mp3"],
     desc: "To download songs.",
     react: "🎵",
     category: "download",
@@ -19,7 +20,7 @@ const url = data.url
 let desc = `
 *_꩜ SILENT-SOBX-MD MUSIC DOWNLOADER ꩜_*
 
-🎵 *Song Found!* 
+🎵 *MUSIC FOUND ♻️!* 
 
 ➥ *Title:* ${data.title} 
 ➥ *Duration:* ${data.timestamp} 
@@ -54,7 +55,8 @@ console.log(e)
 //====================video_dl=======================
 
 cmd({
-    pattern: "mp4",
+    pattern: "video",
+    alias: ["ytv","darama","mp4","ytmp4"],
     desc: "To download videos.",
     react: "🎥",
     category: "download",
@@ -71,7 +73,7 @@ const url = data.url
 let desc = `
 *_꩜ SILENT-SOBX-MD VIDEO DOWNLOADER ꩜_*
 
-🎥 *Video Found!* 
+🎥 *VIDEO FOUND ♻️!* 
 
 ➥ *Title:* ${data.title} 
 ➥ *Duration:* ${data.timestamp} 
@@ -95,7 +97,7 @@ let downloadUrl = down.dl_url
 
 //send video message
 await conn.sendMessage(from,{video: {url:downloadUrl},mimetype:"video/mp4"},{quoted:mek})
-await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© 𝘘𝘜𝘌𝘌𝘕 𝘈𝘕𝘑𝘜 ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ - ᴍᴅ*"},{quoted:mek})
+await conn.sendMessage(from,{document: {url:downloadUrl},mimetype:"video/mp4",fileName:data.title + ".mp4",caption:"*© sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ*"},{quoted:mek})
 
 }catch(e){
 console.log(e)

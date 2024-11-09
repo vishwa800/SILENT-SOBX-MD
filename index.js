@@ -46,7 +46,7 @@ const mongoose = require('mongoose')
 const { tmpdir } = require('os')
 const Crypto = require('crypto')
 const path = require('path')
-const prefix = ('.')
+const prefix = config.PREFIX
 
 const ownerNumber = ['923096287432']
 

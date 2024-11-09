@@ -1,7 +1,6 @@
 const { cmd } = require('../command')
 const fs = require('fs');
 const path = require('path');
-const {readEnv} = require('../lib/database')
 const config = require('../config')
 // List of bad words to check against
  // Replace with actual words

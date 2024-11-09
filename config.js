@@ -15,4 +15,5 @@ ALIVE_IMG: process.env.ALIVE_IMG || "https://telegra.ph/file/2a06381b260c3f096a6
 ALIVE_MSG: process.env.ALIVE_MSG || "HII DEAR IM ONLINE I'M SILENT-SOBX-MD WHATSAPP BOT 😊♻️",
 ANTI_LINK: process.env.ANTI_LINK || "true",
 ANTI_BAD: process.env.ANTI_BAD || "true",
+PREFIX: process.env.PREFIX || ".",
 };

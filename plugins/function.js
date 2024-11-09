@@ -9,7 +9,7 @@ cmd({
 },
 async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender }) => {
     try {
-        const config = await readEnv();
+    
         const badWords = ["wtf", "mia", "xxx","fuck","sex","huththa","pakaya","ponnaya","hutto"]
         if (!isGroup || isAdmins || !isBotAdmins) return; // Skip if not in group, or sender is admin, or bot is not admin
       
@@ -32,7 +32,7 @@ cmd({
 },
 async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
     try {
-        const config = await readEnv();
+        
         if (!isGroup || isAdmins || !isBotAdmins) return; // Skip if not in group, or sender is admin, or bot is not admin
         if (whatsappLinkPattern.test(body) & config.ANTI_LINK === 'true') {
                   await conn.sendMessage(from, { delete: mek.key }, { quoted: mek });

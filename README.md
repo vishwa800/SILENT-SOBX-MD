@@ -110,7 +110,7 @@ src="https://cardivo.vercel.app/api?name=SILENT%20LOVER&description=🥂THE%20WO
 `✠ IF YOU DON'T HAVE YOUR PRIVATE MONGODB KEY SO YOU CAN USE THIS PUBLIC KEY FOR DEPLOY SILENT-SOBX-MD BOT ✠`
 
 ```
-mongodb+srv://suhail:suhail@clustere.tuhzpez.mongodb.net/?retryWrites=true&w=majority
+mongodb+srv://su7465058:it583k0A4NbDPlE4@cluster0.eawwp3y.mongodb.net/?retryWrites=true&w=majority
 ```
 
 ### <br>    ❖ SESSION_ID ❖

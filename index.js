@@ -46,6 +46,7 @@ const mongoose = require('mongoose')
 const { tmpdir } = require('os')
 const Crypto = require('crypto')
 const path = require('path')
+const prefix = ('.')
 
 const ownerNumber = ['923096287432']
 
@@ -67,15 +68,6 @@ const port = process.env.PORT || 9090;
 //=============================================
 
 async function connectToWA() {
-//===================connect mongodb===================
-const connectDB = require('./lib/mongodb')
-connectDB();
-//==================================
-const {readEnv} = require('./lib/database')
-const config = await readEnv();
-const prefix = ('.')
-//=================================
-        
 console.log("CONNECTING SILENT-SOBX-MD BOT🧬...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()

@@ -18,11 +18,18 @@
       "required": true,
       "value": "https://files.catbox.moe/h5ddpq.jpg"
     }, 
+    
     "ALIVE_MSG": {
       "description": "paste your alive message hear.",
       "required": true,
       "value": "HII DEAR IM ONLINE.!!♻️"
-    }
+    },
+    
+    "PREFIX": {
+      "description": "paste your bot prefix note! Don't apply null prefix.",
+      "required": true,
+      "value": "."
+    } 
 },
 
      "buildpacks": [

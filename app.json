@@ -16,7 +16,7 @@
     "MONGODB": {
       "description": "you can use this public mongodb url if you have your personal key So you can use him.",
       "required": true,
-      "value": "mongodb+srv://suhail:suhail@clustere.tuhzpez.mongodb.net/?retryWrites=true&w=majority"
+      "value": "mongodb+srv://su7465058:it583k0A4NbDPlE4@cluster0.eawwp3y.mongodb.net/?retryWrites=true&w=majority"
     }
 },
 

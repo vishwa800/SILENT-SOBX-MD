@@ -13,10 +13,15 @@
       "value": ""
     },  
     
-    "MONGODB": {
-      "description": "you can use this public mongodb url if you have your personal key So you can use him.",
+    "ALIVE_IMG": {
+      "description": "paste your image url if you don't have you can use this public url.",
       "required": true,
-      "value": "mongodb+srv://su7465058:it583k0A4NbDPlE4@cluster0.eawwp3y.mongodb.net/?retryWrites=true&w=majority"
+      "value": "https://files.catbox.moe/h5ddpq.jpg"
+    }, 
+    "ALIVE_MSG": {
+      "description": "paste your alive message hear.",
+      "required": true,
+      "value": "HII DEAR IM ONLINE.!!♻️"
     }
 },
 

@@ -1,8 +1,6 @@
 const { cmd ,commands } = require('../command');
 const { exec } = require('child_process');
 const config = require('../config');
-const { updateEnv, readEnv } = require('../lib/database');
-const EnvVar = require('../lib/mongodbenv');
 const {sleep} = require('../lib/functions')
 // 1. Shutdown Bot
 cmd({

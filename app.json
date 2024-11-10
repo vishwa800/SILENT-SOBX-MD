@@ -77,6 +77,12 @@
       "description": "Make it true if you want bot fake record.",
       "required": true,
       "value": "true"
+    },
+
+    "FAKE_TYPING": {
+      "description": "Make it true if you want bot fake typing.",
+      "required": true,
+      "value": "false"
     } 
 },
 

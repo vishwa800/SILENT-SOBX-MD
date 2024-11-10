@@ -29,7 +29,8 @@
       "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": true,
       "value": "."
-    } 
+    },
+    
     "MODE": {
       "description": "select your bot work type public-private-inbox-group.",
       "required": true,

@@ -204,7 +204,8 @@ if (config.AUTO_REACT === 'true')
     m.react("💖");
 }
 if (!isReact && senderNumber === botNumber) {
-    m.react("🤗");
+if (config.OWNER_REACT === 'true')
+    m.react("👑");
 }                
 //============================        
         

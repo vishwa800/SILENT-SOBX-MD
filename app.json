@@ -40,7 +40,7 @@
     "AUTO_VOICE": {
       "description": "Make it true if you want bot auto voice.",
       "required": true,
-      "value": "false"
+      "value": "true"
     }, 
 
     "AUTO_REPLY": {
@@ -76,7 +76,7 @@
     "FAKE_RECORDING": {
       "description": "Make it true if you want bot fake record.",
       "required": true,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_REACT": {
@@ -89,7 +89,14 @@
       "description": "Make it true if you want bot OwnerReact.",
       "required": true,
       "value": "true"
-    } 
+    },
+  
+    "FAKE_TYPING": {
+      "description": "Make it true if you want bot fake record.",
+      "required": true,
+      "value": "true"
+    }
+
 },
 
      "buildpacks": [

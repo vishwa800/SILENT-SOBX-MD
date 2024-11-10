@@ -76,7 +76,7 @@
     "FAKE_RECORDING": {
       "description": "Make it true if you want bot fake record.",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
 
     "AUTO_REACT": {

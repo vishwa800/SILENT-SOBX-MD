@@ -60,7 +60,7 @@ async (conn, mek, m, { from, body, isOwner }) => {
     }                
 });
 
-//fakereacord
+
 //fake recording
 cmd({
   on: "body"
@@ -68,5 +68,15 @@ cmd({
 async (conn, mek, m, { from, body, isOwner }) => {       
  if (config.FAKE_RECORDING === 'true')
                 await conn.sendPresenceUpdate('recording', from);
+            }
+   );
+
+//fake typing
+cmd({
+  on: "body"
+},    
+async (conn, mek, m, { from, body, isOwner }) => {       
+ if (config.FAKE_TYPING === 'true')
+                await conn.sendPresenceUpdate('typing', from);
             }
    );

@@ -79,10 +79,10 @@
       "value": "true"
     },
 
-    "FAKE_TYPING": {
-      "description": "Make it true if you want bot fake typing.",
+    "AUTO_REACT": {
+      "description": "Make it true if you want bot AutoReact.",
       "required": true,
-      "value": "false"
+      "value": "true"
     } 
 },
 

@@ -198,7 +198,11 @@ if(isReact) return
 m.react("🦋")
 }
 //==========================public react===============//
-
+//AutoReact 
+if (!isReact && senderNumber !== botNumber) {
+if (config.AUTO_REACT === 'true')
+    m.react("💖");
+}
 if (!isReact && senderNumber === botNumber) {
     m.react("🤗");
 }                

@@ -30,6 +30,11 @@
       "required": true,
       "value": "."
     } 
+    "MODE": {
+      "description": "select your bot work type public-private-inbox-group.",
+      "required": true,
+      "value": "public"
+    } 
 },
 
      "buildpacks": [

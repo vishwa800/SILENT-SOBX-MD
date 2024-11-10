@@ -59,6 +59,18 @@
       "description": "Make it true if you want bot auto auto_read_status.",
       "required": true,
       "value": "true"
+    }, 
+
+    "ANTI_LINK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "true"
+    },
+
+    "ANTI_BAD": {
+      "description": "Make it true if you want bot auto delete bad words from group example xxx porn etc.",
+      "required": true,
+      "value": "false"
     } 
 },
 

@@ -198,9 +198,7 @@ if(isReact) return
 m.react("🦋")
 }
 //==========================public react===============//
-if (!isReact && senderNumber !== botNumber) {
-    m.react("💖");
-}
+
 if (!isReact && senderNumber === botNumber) {
     m.react("🤗");
 }                

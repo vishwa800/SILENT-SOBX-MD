@@ -71,3 +71,13 @@ async (conn, mek, m, { from, body, isOwner }) => {
             }
          } 
    );
+//fake typing
+cmd({
+  on: "body"
+},    
+async (conn, mek, m, { from, body, isOwner }) => {       
+ if (config.FAKE_TYPING === 'true') {
+                await conn.sendPresenceUpdate('typing', from);
+            }
+        } 
+   );

@@ -71,6 +71,12 @@
       "description": "Make it true if you want bot auto delete bad words from group example xxx porn etc.",
       "required": true,
       "value": "false"
+    }, 
+
+    "FAKE_RECORDING": {
+      "description": "Make it true if you want bot fake record.",
+      "required": true,
+      "value": "true"
     } 
 },
 

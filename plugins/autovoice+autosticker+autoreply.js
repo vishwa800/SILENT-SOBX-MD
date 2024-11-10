@@ -66,7 +66,8 @@ cmd({
   on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {       
- if (config.FAKE_RECORDING === 'true')
+ if (config.FAKE_RECORDING === 'true') {
                 await conn.sendPresenceUpdate('recording', from);
             }
+         } 
    );

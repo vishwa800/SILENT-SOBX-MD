@@ -38,7 +38,7 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 
 *ᴄʀᴇᴀᴛᴇᴅ ʙʏ sɪʟᴇɴᴛ ʟᴏᴠᴇʀ⁴³²👨🏻‍💻*
 
-*┌─〈 ✦🆂︎ɪʟᴇɴᴛ-🆂ᴏʙx-🅼ᴅ✦ 〉─◆*
+*┌─〈 ${config.BOT_NAME} 〉─◆*
 *│╭─────────────···▸*
 *┴│▸*
 *❖│▸* *ʀᴜɴᴛɪᴍᴇ* : ${runtime(process.uptime())}
@@ -170,33 +170,19 @@ let madeMenu = `╭━━━━∙⋆⋅⋆∙━ ─┉─ • ─┉─⊷
 
 *❒⁠⁠⁠⁠▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭❒*⁠⁠⁠⁠
 
+┏━━━━━━━━━━━━━━━━━━━━━━
+    *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
+┗━━━━━━━━━━━━━━━━━━━━━━
+
+
 > *POWERED BY SILENTLOVER432*
 ╘✦•·········•••••••••············•✦ 
 `
 
-await conn.sendMessage(from, { text: madeMenu ,
-  contextInfo: {
-    mentionedJid: [ '' ],
-    groupMentions: [],
-    forwardingScore: 999,
-    isForwarded: false,
-    forwardedNewsletterMessageInfo: {
-      newsletterJid: '120363232588171807@newsletter',
-      newsletterName: "SILENTLOVER432",
-      serverMessageId: 999
-    },
-externalAdReply: { 
-title: '◀︎SILENT-SOBX-MD MENU▶︎',
-body: `${pushname}`,
-mediaType: 1,
-sourceUrl: "https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s" ,
-thumbnailUrl: "https://files.catbox.moe/h5ddpq.jpg" ,
-renderLargerThumbnail: true,
-showAdAttribution: true
-}
-}}, { quoted: mek})
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:madeMenu},{quoted:mek})
+
 }catch(e){
 console.log(e)
 reply(`${e}`)
 }
-});
+})

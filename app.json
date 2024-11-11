@@ -95,6 +95,12 @@
       "description": "Make it true if you want bot fake record.",
       "required": true,
       "value": "true"
+    }, 
+
+    "BOT_NAME": {
+      "description": "write hear your name.",
+      "required": true,
+      "value": "✦sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ✦"
     }
 
 },

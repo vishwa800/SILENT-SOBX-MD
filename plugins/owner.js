@@ -34,7 +34,7 @@ title: 'SILENTLOVER432',
 body: `${pushname}`,
 mediaType: 1,
 sourceUrl: "https://wa.me/+923096287432?text=HY SILENTLOVER4 I'M MSG YOU FROM OWNER ADS" ,
-thumbnailUrl: "https://files.catbox.moe/h5ddpq.jpg" ,
+thumbnailUrl: "https://telegra.ph/file/ffda25ad4092b3328d551.jpg" ,
 renderLargerThumbnail: true,
 showAdAttribution: true
 }

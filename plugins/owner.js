@@ -1,6 +1,5 @@
-const {cmd , commands} = require('../command')
 const config = require('../config')
-
+const {cmd , commands} = require('../command')
 cmd({
     pattern: "owner",
     desc: "im owner",
@@ -10,7 +9,7 @@ cmd({
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-let owner = ` 
+let owner =` 
 *HEAR IS BOT OWNER INFO*
 *NAME:-* *USMAN.S*
 *AGE:-* *20 YEARS*

@@ -91,7 +91,7 @@
       "value": "true"
     },
   
-    "ALLWAYS_OFFLINE": {
+    "ALWAYS_OFFLINE": {
       "description": "Make it true if you want bot allways show offline.",
       "required": true,
       "value": "true"

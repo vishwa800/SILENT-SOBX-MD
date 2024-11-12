@@ -19,6 +19,6 @@ PREFIX: process.env.PREFIX || ".",
 FAKE_RECORDING: process.env.FAKE_RECORDING || "true",
 AUTO_REACT: process.env.AUTO_REACT || "true",
 OWNER_REACT: process.env.OWNER_REACT || "true",
-FAKE_TYPING: process.env.FAKE_TYPING || "true",
+ALWAYS_OFFLINE: process.env.ALWAYS_OFFLINE || "true",
 BOT_NAME: process.env.BOT_NAME || "➺ѕเℓεɳƭ_ℓσѵε૨࿐",
 };

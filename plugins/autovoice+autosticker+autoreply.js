@@ -71,15 +71,12 @@ async (conn, mek, m, { from, body, isOwner }) => {
             }
          } 
    );
-//fake typing
+//always offline
 cmd({
   on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {       
- if (config.ALWAYS_OFFLINE === 'true') {
-                conn.presenceUpdate('unavailable');
-  console.log('Bot presence set to offline');
-}
-            
-        } 
+ setInterval(() => {
+  if (config.ALWAYS_OFFLINE === 'true') conn.presence = 'unavailable';
+}, 60000); // 1 minute
    );

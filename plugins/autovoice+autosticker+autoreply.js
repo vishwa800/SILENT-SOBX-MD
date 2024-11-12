@@ -72,11 +72,15 @@ async (conn, mek, m, { from, body, isOwner }) => {
          } 
    );
 //always offline
+
 cmd({
   on: "body"
 },    
 async (conn, mek, m, { from, body, isOwner }) => {       
- setInterval(() => {
-  if (config.ALWAYS_OFFLINE === 'true') conn.presence = 'unavailable';
-}, 60000); // 1 minute
+ if (config.ALWAYS_OFFLINE === 'true') {
+                conn.presenceUpdate('unavailable');
+  console.log('Bot presence set to offline');
+}
+            
+        } 
    );

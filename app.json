@@ -89,12 +89,7 @@
       "description": "Make it true if you want bot OwnerReact.",
       "required": true,
       "value": "true"
-    },
-  
-    "ALWAYS_OFFLINE": {
-      "description": "Make it true if you want bot allways show offline.",
-      "required": true,
-      "value": "true"
+    
     }, 
 
     "BOT_NAME": {

@@ -22,7 +22,8 @@ let status = `*SILENT-SOBX-MD UPTIME LIST*
 
 *OWNER:* *SILENT LOVER⁴³²*
 `
-return reply(`${status}`)
+await conn.sendMessage(from,{image:{url:config.ALIVE_IMG},caption:`${status}`},{quoted:mek})
+
 }catch(e){
 console.log(e)
 reply(`${e}`)

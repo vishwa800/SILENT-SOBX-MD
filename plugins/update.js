@@ -60,13 +60,13 @@ async (conn, mek, m, { from }) => {
                 const savePath = file.startsWith("plugins/")
                     ? path.join("./", file) // Path for plugins folder
                     : `./${file}`; // Path for main files like config.js, etc.
-
+            
                 const fileURL = `https://raw.githubusercontent.com/SILENTLOVER40/SILENT-SOBX-MD/${latestCommitSHA}/${file}`;
                 console.log(`Downloading file: ${file} from ${fileURL}`);
-
-                try {
-                    const response = await axios.get(fileURL);
-                    await fs.writeFile(savePath, response.data, "utf8");
+            try { 
+                const fileURL = `https://raw.githubusercontent.com/SILENTLOVER40/SILENT-SOBX-MD/${commitSHA}/${fileName}`;
+        const response = await axios.get(fileURL);
+        await fs.writeFile(savePath, response.data, "utf8");
                     console.log(`Updated or added: ${file}`);
                 } catch (error) {
                     console.error(`Error updating ${file}:`, error.response?.data || error.message || error);

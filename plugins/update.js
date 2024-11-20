@@ -16,13 +16,17 @@ async (conn, mek, m, { from }) => {
         const githubToken = "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";
         const repoURL = "https://api.github.com/repos/SILENTLOVER40/SILENT-SOBX-MD/commits";
 
-        // Fetch latest commit from GitHub
+        // Fetch the latest commit from GitHub
         const latestCommitResponse = await axios.get(repoURL, {
             headers: {
                 Authorization: `token ${githubToken}`
             }
         });
-        const latestCommitSHA = latestCommitResponse.data[0].sha;
+        const latestCommitSHA = latestCommitResponse.data[0]?.sha;
+
+        if (!latestCommitSHA) {
+            throw new Error("Unable to fetch the latest commit SHA.");
+        }
 
         // Fetch files changed in the latest commit
         const commitDetailsURL = `https://api.github.com/repos/SILENTLOVER40/SILENT-SOBX-MD/commits/${latestCommitSHA}`;
@@ -31,7 +35,11 @@ async (conn, mek, m, { from }) => {
                 Authorization: `token ${githubToken}`
             }
         });
-        const changedFiles = commitDetailsResponse.data.files.map(file => file.filename);
+        const changedFiles = commitDetailsResponse.data.files?.map(file => file.filename) || [];
+
+        if (changedFiles.length === 0) {
+            throw new Error("No changed files found in the latest commit.");
+        }
 
         console.log("Changed files:", changedFiles);
 
@@ -47,45 +55,33 @@ async (conn, mek, m, { from }) => {
         if (latestCommitSHA !== currentCommitSHA) {
             await conn.sendMessage(from, { text: "♻️ Wait for update started......" }, { quoted: mek });
 
-            // Update files in the `plugins` folder
+            // Update files in the `plugins` folder and other specific files
             for (const file of changedFiles) {
-                if (file.startsWith("plugins/")) {
-                    const localPath = path.join("./", file);
-                    await downloadAndUpdateFile(latestCommitSHA, file, localPath);
+                const savePath = file.startsWith("plugins/")
+                    ? path.join("./", file) // Path for plugins folder
+                    : `./${file}`; // Path for main files like config.js, etc.
+
+                const fileURL = `https://raw.githubusercontent.com/SILENTLOVER40/SILENT-SOBX-MD/${latestCommitSHA}/${file}`;
+                console.log(`Downloading file: ${file} from ${fileURL}`);
+
+                try {
+                    const response = await axios.get(fileURL);
+                    await fs.writeFile(savePath, response.data, "utf8");
+                    console.log(`Updated or added: ${file}`);
+                } catch (error) {
+                    console.error(`Error updating ${file}:`, error.response?.data || error.message || error);
                 }
             }
-
-            // Update other specific files
-            const filesToUpdate = ["config.js", "command.js", "index.js"];
-            for (const file of filesToUpdate) {
-                if (changedFiles.includes(file)) {
-                    await downloadAndUpdateFile(latestCommitSHA, file, `./${file}`);
-                }
-            }
-
-            await conn.sendMessage(from, { text: "✅ Update Completed!" }, { quoted: mek });
 
             // Save the latest commit SHA
             await fs.writeFile("./current_commit.txt", latestCommitSHA, "utf8");
+
+            await conn.sendMessage(from, { text: "✅ Update Completed!" }, { quoted: mek });
         } else {
             await conn.sendMessage(from, { text: "✅ You are using the latest version of the bot." }, { quoted: mek });
         }
     } catch (error) {
-        console.error("Error checking for updates:", error.message);
-        await conn.sendMessage(from, { text: "⚠️ Error: Unable to check for updates." }, { quoted: mek });
+        console.error("Error checking for updates:", error.response?.data || error.message || error);
+        await conn.sendMessage(from, { text: `⚠️ Error: ${error.message}` }, { quoted: mek });
     }
 });
-
-/**
- * Helper function to download and update a file
- */
-async function downloadAndUpdateFile(commitSHA, fileName, savePath) {
-    try {
-        const fileURL = `https://raw.githubusercontent.com/SILENTLOVER40/SILENT-SOBX-MD/${commitSHA}/${fileName}`;
-        const response = await axios.get(fileURL);
-        await fs.writeFile(savePath, response.data, "utf8");
-        console.log(`Updated: ${fileName}`);
-    } catch (error) {
-        console.error(`Error updating ${fileName}:`, error.message);
-    }
-}

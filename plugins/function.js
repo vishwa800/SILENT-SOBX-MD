@@ -25,9 +25,6 @@ async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender 
         reply("An error occurred while processing the message.")
     }
 })
-const { cmd } = require('../command');
-const fs = require('fs');
-const config = require('../config');
 
 // Regular expression to detect various platform links
 const linkPatterns = [

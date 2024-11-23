@@ -10,13 +10,13 @@ cmd({
 async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender }) => {
     try {
     
-        const badWords = ["wtf", "mia", "xxx","fuck","sex","huththa","pakaya","ponnaya","hutto"]
+        const badWords = ["wtf", "mia", "xxx","fuck","sex","huththa","pakaya","ponnaya","hutto","lol"]
         if (!isGroup || isAdmins || !isBotAdmins) return; // Skip if not in group, or sender is admin, or bot is not admin
       
         const lowerCaseMessage = body.toLowerCase();
         const containsBadWord = badWords.some(word => lowerCaseMessage.includes(word));
         
-        if (containsBadWord & config.ANTI_BAD_WORD === 'true') {
+        if (containsBadWord & config.ANTI_BAD === 'true') {
           await conn.sendMessage(from, { delete: mek.key }, { quoted: mek });
           await conn.sendMessage(from, { text: "🚫 ⚠️BAD WORDS NOT ALLOWED⚠️ 🚫" }, { quoted: mek });
         }
@@ -28,7 +28,6 @@ async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender 
 
 const linkPatterns = [
     /https?:\/\/(?:chat\.whatsapp\.com|wa\.me)\/\S+/gi,   // WhatsApp group or chat links
-    /wa\.me\/\S+/gi,                                      // wa.me links without https
     /https?:\/\/(?:t\.me|telegram\.me)\/\S+/gi,           // Telegram links
     /https?:\/\/(?:www\.)?youtube\.com\/\S+/gi,           // YouTube links
     /https?:\/\/youtu\.be\/\S+/gi,                        // YouTube short links

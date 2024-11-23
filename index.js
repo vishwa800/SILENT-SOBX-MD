@@ -198,7 +198,7 @@ m.react("🦋")
 
 if(senderNumber.includes("447783770746")){
 if(isReact) return
-m.react("🦋")
+m.react("🎀")
    }
 //==========================public react===============//
 // Auto React 

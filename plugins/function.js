@@ -25,21 +25,34 @@ async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender 
         reply("An error occurred while processing the message.")
     }
 })
-// Regular expression to detect WhatsApp links
-const whatsappLinkPattern = /https?:\/\/(chat\.whatsapp\.com|wa\.me)\/\S+/gi;
+const { cmd } = require('../command');
+const fs = require('fs');
+const config = require('../config');
+
+// Regular expression to detect various platform links
+const linkPatterns = [
+    /https?:\/\/(?:chat\.whatsapp\.com|wa\.me)\/\S+/gi,       // WhatsApp links
+    /https?:\/\/(?:t\.me|telegram\.me)\/\S+/gi,              // Telegram links
+    /https?:\/\/(?:www\.)?youtube\.com\/\S+/gi,              // YouTube links
+    /https?:\/\/youtu\.be\/\S+/gi,                           // YouTube short links
+    /https?:\/\/(?:www\.)?facebook\.com\/\S+/gi,             // Facebook links
+    /https?:\/\/(?:www\.)?instagram\.com\/\S+/gi             // Instagram links
+];
+
 cmd({
-  on: "body"
-},
-async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
+    on: "body"
+}, async (conn, mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply }) => {
     try {
-        
         if (!isGroup || isAdmins || !isBotAdmins) return; // Skip if not in group, or sender is admin, or bot is not admin
-        if (whatsappLinkPattern.test(body) & config.ANTI_LINK === 'true') {
-                  await conn.sendMessage(from, { delete: mek.key }, { quoted: mek });
-                  await conn.sendMessage(from, { text: "⚠️ LINK NOT ALLOWED IN THIS GROUP 🚫" }, { quoted: mek }); 
+
+        const containsLink = linkPatterns.some(pattern => pattern.test(body));
+
+        if (containsLink && config.ANTI_LINK === 'true') {
+            await conn.sendMessage(from, { delete: mek.key }, { quoted: mek }); // Delete the message
+            await conn.sendMessage(from, { text: "⚠️ Links are not allowed in this group 🚫" }, { quoted: mek }); // Send warning
         }
-    }catch (error) {
-        console.error(error)
-        reply("An error occurred while processing the message.")
+    } catch (error) {
+        console.error(error);
+        reply("An error occurred while processing the message.");
     }
 });

@@ -29,7 +29,7 @@ await conn.sendMessage(from, { text: repo ,
     mentionedJid: [ '' ],
     groupMentions: [],
     forwardingScore: 999,
-    isForwarded: true,
+    isForwarded: false,
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363232588171807@newsletter',
       newsletterName: "SILENTLOVER432",

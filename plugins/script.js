@@ -22,14 +22,14 @@ let repo =`
 *|* *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
 *╰──────────────●●►*
 
-> *update command Done*
+> *CREATED BY SILENTLOVER432*
 `
 await conn.sendMessage(from, { text: repo ,
   contextInfo: {
     mentionedJid: [ '' ],
     groupMentions: [],
     forwardingScore: 999,
-    isForwarded: false,
+    isForwarded: true,
     forwardedNewsletterMessageInfo: {
       newsletterJid: '120363232588171807@newsletter',
       newsletterName: "SILENTLOVER432",

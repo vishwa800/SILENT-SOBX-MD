@@ -1,6 +1,7 @@
 const axios = require('axios');
 const config = require('../config')
 const {cmd , commands} = require('../command')
+const googleTTS = require('google-tts-api')
 
 cmd({
     pattern: "trt",

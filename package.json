@@ -36,6 +36,7 @@
         "bard-ai": "2.0.3",
         "betabotz-tools": "0.0.6",
         "btch-downloader": "2.3.1-alpha",
+        "buffer": "6.0.3",
         "buffer-url": "1.0.0",
         "cc-suite": "1.0.5",
         "chart.js": "^4.4.0",

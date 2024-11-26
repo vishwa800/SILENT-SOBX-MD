@@ -122,54 +122,8 @@ conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/h5ddpq.
 }
 })
 conn.ev.on('creds.update', saveCreds)  
-
-
-
-conn.ev.on('messages.update', async (updates) => {
-    for (const update of updates) {
-        if (update.update?.messageStubType === 8) { // نوع پیام حذف شده
-            const messageKey = update.key;
-            const chatId = messageKey.remoteJid;
-            const senderId = messageKey.participant || messageKey.remoteJid;
-            const senderMention = `@${senderId.split('@')[0]}`;
-            const timestamp = new Date(update.messageTimestamp * 1000).toLocaleString();
-
-            // بررسی پیام حذف شده
-            const deletedMessage = await conn.loadMessage(chatId, messageKey.id);
-
-            if (deletedMessage) {
-                const messageType = Object.keys(deletedMessage.message)[0];
-                let messageContent;
-
-                switch (messageType) {
-                    case 'conversation':
-                        messageContent = deletedMessage.message.conversation;
-                        break;
-                    case 'imageMessage':
-                        messageContent = '[تصویر]';
-                        break;
-                    case 'videoMessage':
-                        messageContent = '[ویدیو]';
-                        break;
-                    case 'audioMessage':
-                        messageContent = '[صدا]';
-                        break;
-                    case 'stickerMessage':
-                        messageContent = '[استیکر]';
-                        break;
-                    default:
-                        messageContent = '[نوع پیام ناشناخته]';
-                }
-
-                // ارسال پیام حذف شده
-                const text = `*{ ANTI DELETE }*\n\n*Message:* ${messageContent}\n\n*By:* ${senderMention}\n\n*Time:* ${timestamp}`;
-                conn.sendMessage(chatId, { text: text, mentions: [senderId] });
-            }
-        }
-    }
-});
-
-
+        
+//=============readstatus=======
 
 conn.ev.on('messages.upsert', async(mek) => {
 mek = mek.messages[0]

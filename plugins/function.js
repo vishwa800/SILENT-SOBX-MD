@@ -27,58 +27,6 @@ async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender 
 })
 
 
-cmd({
-    on: "revokedMessage"
-}, async (conn, mek, m, { from, sender, reply }) => {
-    try {
-        const participant = mek.participant || sender; // User who deleted the message
-        const revokedMessage = mek.message || null; // Deleted message content
-        const messageType = revokedMessage ? Object.keys(revokedMessage)[0] : "unknown"; // Type of deleted message
-
-        // Rebuild the message and send details
-        if (revokedMessage) {
-            let content = "";
-            if (messageType === "imageMessage" || messageType === "videoMessage") {
-                content = `📷 A media message was deleted.`;
-            } else if (messageType === "documentMessage") {
-                content = `📄 A document was deleted.`;
-            } else if (messageType === "conversation" || messageType === "extendedTextMessage") {
-                content = `💬 Deleted message: "${revokedMessage.conversation || revokedMessage.extendedTextMessage.text}"`;
-            } else {
-                content = `🔄 A different type of message was deleted.`;
-            }
-
-            // Send details about the deleted message
-            await conn.sendMessage(
-                from,
-                {
-                    text: `⚠️ **Anti Delete Alert** ⚠️\n\n👤 **By:** @${participant.split('@')[0]}\n⏰ **Time:** ${new Date().toLocaleString()}\n📌 **Details:**\n${content}`,
-                    mentions: [participant],
-                },
-                { quoted: mek }
-            );
-
-            // If it's an image or video, resend the media
-            if (messageType === "imageMessage" || messageType === "videoMessage") {
-                await conn.sendMessage(
-                    from,
-                    {
-                        [messageType === "imageMessage" ? "image" : "video"]: revokedMessage[messageType].url,
-                        caption: `Resending deleted media by @${participant.split('@')[0]}`,
-                        mentions: [participant],
-                    },
-                    { quoted: mek }
-                );
-            }
-        }
-    } catch (error) {
-        console.error(error);
-        reply("🚫 An error occurred while processing the deleted message.");
-    }
-});
-
-
-
 const linkPatterns = [
     /https?:\/\/(?:chat\.whatsapp\.com|wa\.me)\/\S+/gi,   // WhatsApp group or chat links
     /wa\.me\/\S+/gi,                                      // wa.me links without https

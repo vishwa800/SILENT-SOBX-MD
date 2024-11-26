@@ -202,8 +202,24 @@ if (!isReact && senderNumber === botNumber) {
         m.react(randomOwnerReaction);
     }
 }
-//============================        
         
+//============================HRTPACK============================       
+        //=======HRT React 
+if (!isReact && senderNumber !== botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+//=======HRT React 
+if (!isReact && senderNumber === botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}        
 //=================================WORKTYPE=========================================== 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return

@@ -40,13 +40,15 @@ cmd({
 *ᴄᴏᴜɴᴛʀʏ:* ${data.Country}
 *ᴀᴡᴀʀᴅꜱ:* ${data.Awards}
 *ɪᴍᴅʙ ʀᴀᴛɪɴɢ:* ${data.imdbRating}
+
+> POWERED BY SILENT-SOBX-MD
 `;
 
         const imageUrl = data.Poster && data.Poster !== 'N/A' ? data.Poster : config.ALIVE_IMG;
 
         await conn.sendMessage(from, {
             image: { url: imageUrl },
-            caption: `${movieInfo}\n> UMAR`
+            caption: `${movieInfo}\n> CREATED BY SILENTLOVER432`
         }, { quoted: mek });
     } catch (e) {
         console.error(e);

@@ -28,7 +28,7 @@ async (conn,mek, m, { from, body, isGroup, isAdmins, isBotAdmins, reply, sender 
 
 
 cmd({
-    on: "message-revoke"
+    on: "body"
 }, async (conn, mek, m, { from, sender, reply }) => {
     try {
         const participant = mek.participant || sender; // User who deleted the message

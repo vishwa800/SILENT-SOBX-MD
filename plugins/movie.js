@@ -4,7 +4,7 @@ const config = require('../config'); // Ensure your API key is in config
 
 // Command to fetch movie details
 cmd({
-    pattern: "movie",
+    pattern: "movieinfo",
     desc: "Fetch detailed information about a movie.",
     category: "utility",
     react: "🎞️",

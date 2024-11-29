@@ -21,6 +21,10 @@ contact me 923096287432 ♻️
 
 const config = require('../config')
 const { cmd, commands } = require('../command')
+const axios = require("axios")
+const fs = require("fs")
+const FormData = require("form-data")
+
 
 cmd({
     pattern: "url",

@@ -40,13 +40,15 @@ async (conn, mek, m, { quoted, q, reply }) => {
         // Send the saved media back
         const mediaMessage = {
             caption: q || '',
-        };
-        mediaMessage[mediaType] = { url: `file://${filePath}` };
+        }       
 
-        await conn.sendMessage(m.sender, mediaMessage, { quoted: mek });
-        await reply("✅ Successfully saved and sent the media file.");
+        mediaMessage[mediaType] = { url: `file://${filePath}` }
+    
+        await conn.sendMessage(m.sender, mediaMessage, { quoted: mek })
+        await reply("✅ Successfully saved and sent the media file.")
     } catch (error) {
         console.error(error);
-        reply("❌ Failed to save and send the media. Please try again.");
+        reply("❌ Failed to save and send the media. Please try again.")
     }
+   
 });

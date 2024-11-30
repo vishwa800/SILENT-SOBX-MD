@@ -37,17 +37,22 @@ try{
 let repo =`
 *[ •  B O T - O W N E R ‎ • ]*
 *╭┈───────────────•*
-
+*│  ◦* *SILENTLOVER432*
 *╰┈───────────────•*
 
-> *SILENT-SOBX-MD REPO:*
-*|* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*
+*[ •  SILENT-SOBX-MD - REPO ‎ • ]*
+*╭┈───────────────•*
+*│  ◦* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*
+*╰┈───────────────•*
 
-> *SUPPORT GROUP:*
-*|* *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
-*╰──────────────●●►*
+*[ •  SUPPORT - GROUP‎ • ]*
+*╭┈───────────────•*
+*│  ◦* *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
+*╰┈───────────────•*
 
-> *CREATED BY SILENTLOVER432*
+*•────────────•⟢*
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²
+*•────────────•⟢*
 `
 await conn.sendMessage(from, { text: repo ,
   contextInfo: {

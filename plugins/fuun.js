@@ -45,12 +45,23 @@ const axios = require('axios');
                                  const synonyms = definitionData.meanings[0].definitions[0].synonyms.join(', ') || 'No synonyms available';
 
 const wordInfo = `
-📚 *Word*: ${definitionData.word}
-🔍 *Definition*: ${definition}
-📝 *Example*: ${example}
-🔗 *Synonyms*: ${synonyms}
+*[ •  SILENT-SOBX-MD - DEFINE ‎ • ]*
+*╭┈───────────────•*
+*│  ◦* 📚 *WORD*: ${definitionData.word}
+*│  ◦*
+*│  ◦* 🔍 *DEFINITION*: ${definition}
+*│  ◦*
+*│  ◦* 📝 *EXAMPLE*: ${example}
+*│  ◦*
+*│  ◦* 🔗 *SYNONYMS*: ${synonyms}
+*│  ◦*
+*│  ◦* *MADE WITH ♥ SILENT-SOBX-MD*
+*╰┈───────────────•*
 
-*MADE WITH ♥ SILENT-SOBX-MD*`;
+*•────────────•⟢*
+> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²*
+*•────────────•⟢*
+`;
 
                                  return reply(wordInfo);
                              } catch (e) {
@@ -96,11 +107,15 @@ async (conn, mek, m, { from, q, reply }) => {
         const fact = response.data.text;
 
         const funFact = `
-👾 *SILENT-SOBX-MD RANDOM FACT* 👾
-
-${fact}
-
+*[ •  SILENT-SOBX-MD - RANDOM FACT‎ • ]*
+*╭┈───────────────•*
+*│  ◦* *${fact}*
+*╰┈───────────────•*
 Isn't that interesting? 😄
+
+*•────────────•⟢*
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²
+*•────────────•⟢*
 `;
 
         return reply(funFact);
@@ -123,10 +138,16 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const joke = response.data;
         const jokeMessage = `
-😂 *Here's a random joke for you!* 😂
-*${joke.setup}*
-${joke.punchline} 😄
-> *POWERED BY SILENTLOVER432*
+*[ •  SILENT-SOBX-MD - RANDOM JOKE‎ • ]*
+*╭┈───────────────•*
+*│  ◦* 😂 *Here's a random joke for you!* 😂
+*│  ◦* *${joke.setup}*
+*│  ◦* ${joke.punchline} 😄
+*╰┈───────────────•*
+
+*•────────────•⟢*
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²
+*•────────────•⟢*
 `;
         return reply(jokeMessage);
     } catch (e) {
@@ -147,10 +168,17 @@ async (conn, mek, m, { from, reply }) => {
         const response = await axios.get('https://api.quotable.io/random');
         const quote = response.data;
         const message = `
-💬 "${quote.content}"
-- ${quote.author}
-*QUOTES BY SILENTLOVER432*
-        `;
+*[ •  SILENT-SOBX-MD - QUOTE ‎ • ]*
+*╭┈───────────────•*
+*│  ◦* 💬 "${quote.content}"
+*│  ◦* - ${quote.author}
+*│  ◦* *QUOTES BY SILENTLOVER432*
+*╰┈───────────────•*
+
+*•────────────•⟢*
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²
+*•────────────•⟢*
+`;
         return reply(message);
     } catch (e) {
         console.error("Error fetching quote:", e);

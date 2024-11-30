@@ -182,6 +182,40 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
+//AUto Read Function By @Um4r719
+conn.ev.on('messages.upsert', async (mek) => {
+    try {
+        mek = mek.messages[0];
+        if (!mek.message) return;
+
+        // Handle ephemeral messages
+        mek.message = (getContentType(mek.message) === 'ephemeralMessage') 
+            ? mek.message.ephemeralMessage.message 
+            : mek.message;
+
+        // Auto-read functionality
+        if (config.READ_MESSAGE === 'true') {
+            await conn.readMessages([mek.key]);  // Mark message as read
+            console.log(`Marked message from ${mek.key.remoteJid} as read.`);
+        }
+
+        // Continue with your existing message processing logic here...
+        const m = sms(conn, mek);
+        const type = getContentType(mek.message);
+        const content = JSON.stringify(mek.message);
+        const from = mek.key.remoteJid;
+        const isGroup = from.endsWith('@g.us');
+        const sender = mek.key.fromMe 
+            ? conn.user.id.split(':')[0] + '@s.whatsapp.net' 
+            : mek.key.participant || mek.key.remoteJid;
+
+        // More code...
+    } catch (err) {
+        console.error('Error in message handler:', err);
+    }
+});
+
+
         
 //================ownerreact==============
 if(senderNumber.includes("923096287432")){

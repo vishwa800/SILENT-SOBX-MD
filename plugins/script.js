@@ -35,9 +35,10 @@ cmd({
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
 let repo =`
-*╭──────────────●●►*
-> *BOT OWNER:*
-*|* *SILENTLOVER432*
+*[ •  B O T - O W N E R ‎ • ]*
+*╭┈───────────────•*
+
+*╰┈───────────────•*
 
 > *SILENT-SOBX-MD REPO:*
 *|* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*

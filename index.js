@@ -100,24 +100,22 @@ console.log('SILENT-SOBX-MD CONNECTED TO WHATSAPP ENJOY ✅')
 let up = `
 *[ •  SILENT-SOBX-MD - STARTED‎ • ]*
 *╭┈───────────────•*
-*│  ◦* *➺sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʏ ᴛʏᴘᴇ .ᴍᴇɴᴜ ᴛᴏ ᴄᴏᴍᴍᴀɴᴅ ʟɪsᴛ ✅*
+*│  ◦* *_Congratulations Your Bot Active Successfully_*
 *│  ◦*
-*│  ◦* *❁ᴊᴏɪɴ ᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴜᴘᴅᴀᴛᴇs sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ❁*
+*│  ◦* *❁ ᴊᴏɪɴ ᴏᴜʀ ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ ❁*
 *│  ◦*
 *│  ◦* *https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s*
 *│  ◦*
-*│  ◦* *❁ᴊᴏɪɴ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴜᴘᴅᴀᴛᴇs sɪʟᴇɴᴛ-sᴏʙx-ᴍᴅ❁*
+*│  ◦* *❁ ᴊᴏɪɴ ᴏᴜʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇʟ ❁*
 *│  ◦*
 *│  ◦* *https://youtube.com/@silentlover432?si=n3pYYLvSFLP7Shj7*
 *╰┈───────────────•*
-*[ •  B O T  - I N F O ‎ • ]*
+*[ •  B O T  - R E P O ‎ • ]*
 *╭┈───────────────•*
-*│✫➠ - 📂REPOSITORY NAME:* *SILENT-SOBX-MD*
-*│✫➠ - 📃DESCRIPTION:* *THE WORLD BEST WHATSAPP BOT♻️*
-*│✫➠ - 🛡️OWNER:* *SILENT LOVER⁴³²*
 *│✫➠ - 🌐URL:* *https://github.com/SILENTLOVER40/SILENT-SOBX-MD*
 *╰┈───────────────•*
 *YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: [${prefix}]*
+
 *•────────────•⟢*
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ sɪʟᴇɴᴛʟᴏᴠᴇʀ⁴³²
 *•────────────•⟢*

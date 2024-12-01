@@ -102,6 +102,12 @@
       "description": "Make it true if you want bot only heart ♥️ emjois reaction .",
       "required": true,
       "value": "false"
+    }, 
+
+    "READ_MESSAGE": {
+      "description": "Make it true if you want bot read your all sms just now.",
+      "required": true,
+      "value": "false"
     }
 
 },

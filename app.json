@@ -108,6 +108,11 @@
       "description": "Make it true if you want bot read your all sms just now.",
       "required": true,
       "value": "false"
+    }, 
+    "CAPTION": {
+      "description": "enter your caption if you want to show on menu.",
+      "required": true,
+      "value": "POWERED BY SILENTLOVER432"
     }
 
 },

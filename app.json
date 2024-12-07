@@ -16,13 +16,13 @@
     "ALIVE_IMG": {
       "description": "paste your image url if you don't have you can use this public url.",
       "required": true,
-      "value": "https://files.catbox.moe/h5ddpq.jpg"
+      "value": "https://telegra.ph/file/2a06381b260c3f096a612.jpg"
     }, 
     
     "ALIVE_MSG": {
       "description": "paste your alive message hear.",
       "required": true,
-      "value": "HII DEAR IM ONLINE.!!♻️"
+      "value": "ʜɪɪ ᴍʏ ᴅᴇᴀʀ ғʀɪᴇɴᴅ ɪᴍ ᴀʟɪᴠᴇ ɴᴏᴡ.!!"
     },
     
     "PREFIX": {
@@ -52,7 +52,7 @@
     "AUTO_STICKER": {
       "description": "Make it true if you want bot auto sticker.",
       "required": true,
-      "value": "false"
+      "value": "true"
     }, 
 
     "AUTO_READ_STATUS": {
@@ -70,7 +70,7 @@
     "ANTI_BAD": {
       "description": "Make it true if you want bot auto delete bad words from group example xxx porn etc.",
       "required": true,
-      "value": "false"
+      "value": "true"
     }, 
 
     "FAKE_RECORDING": {

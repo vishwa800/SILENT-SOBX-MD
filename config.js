@@ -9,7 +9,7 @@ module.exports = {
     SESSION_ID: process.env.SESSION_ID || "PVgXSaLI#SKl_hccOEcTC6aJoLhSjzZgWbecURsP59Pgs2iH6MLc",
     CAPTION: process.env.CAPTION || "POWERED BY SILENTLOVER432",
     AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "true",
-    READ_MESSAGE: process.env.READ_MESSAGE || "true", // Added auto-read configuration
+    READ_MESSAGE: process.env.READ_MESSAGE || "false", // Added auto-read configuration
     MODE: process.env.MODE || "private",
     AUTO_VOICE: process.env.AUTO_VOICE || "false",
     AUTO_STICKER: process.env.AUTO_STICKER || "false",
